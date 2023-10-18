@@ -4,24 +4,39 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameplayManager : MonoBehaviour
 {
     private static List<Tile> tiles = new();
     private static int tilesMaxLength;
-    [SerializeField] Transform targetPoint;
-    [SerializeField] float moveDuration;
-    [SerializeField] float tileWidth;
-    [SerializeField] Vector3 tileSizeInHolder;
+    private AudioSource audioSource;
+
+    [SerializeField] private Transform targetPoint;
+    [SerializeField] private float moveDuration;
+    [SerializeField] private float tileWidth;
+    [SerializeField] private float tileSizeScaleInHolder;
+    [SerializeField] private AudioClip pickUpTileAudio;
+    [SerializeField] private AudioClip matchedTileAudio;
+    [SerializeField] private GameObject clearTileEffect;
+
+    private bool isTileMoving = false;
+    private bool isLost = false;
+    private Coroutine rearrangeCoroutine = null;
+    private int matchedTiles = 0;
+    public UnityEvent OnLost;
+    public UnityEvent OnMatchTiles;
 
 
-
+    private void Awake()
+    {
+        tiles.Clear();
+    }
     private void Start()
     {
         tilesMaxLength = 7;
+        audioSource = GetComponent<AudioSource>();
     }
-    private bool isTileMoving = false;
-
 
     private IEnumerator RearrangeTiles()
     {
@@ -51,7 +66,7 @@ public class GameplayManager : MonoBehaviour
                 float angle = Quaternion.Angle(startRotations[i], Quaternion.identity) * t;
                 tiles[i].transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                tiles[i].transform.localScale = Vector3.Lerp(startScales[i], tileSizeInHolder, t);
+                tiles[i].transform.localScale = Vector3.Lerp(startScales[i], Vector3.one * tileSizeScaleInHolder, t);
             }
 
             elapsedTime += Time.deltaTime;
@@ -63,13 +78,21 @@ public class GameplayManager : MonoBehaviour
             Vector3 targetPosition = targetPoint.transform.position + new Vector3(0, 0, -tileWidth * i);
             tiles[i].transform.position = targetPosition;
             tiles[i].transform.rotation = Quaternion.identity;
-            tiles[i].transform.localScale = tileSizeInHolder;
+            tiles[i].transform.localScale = Vector3.one * tileSizeScaleInHolder;
         }
 
         isTileMoving = false;
+        rearrangeCoroutine = null;
     }
 
-
+    private void StartRearrangeCoroutine()
+    {
+        if (rearrangeCoroutine != null)
+        {
+            StopCoroutine(rearrangeCoroutine);
+        }
+        rearrangeCoroutine = StartCoroutine(RearrangeTiles());
+    }
 
 
     public void AddTileToList(Tile tile)
@@ -77,9 +100,7 @@ public class GameplayManager : MonoBehaviour
         tiles.Add(tile);
         tiles.Sort((tile1, tile2) => tile.Compare(tile1, tile2));
 
-        // int addedTileIndex = tiles.FindIndex(t => t == tile);
-
-        StartCoroutine(RearrangeTiles());
+        StartRearrangeCoroutine();
 
 
         StartCoroutine(WaitUntil(() => !isTileMoving, () =>
@@ -87,13 +108,18 @@ public class GameplayManager : MonoBehaviour
             int firstTileIndex = HasTripleTiles();
             if (firstTileIndex >= 0)
             {
-                Debug.Log("Matched!");
+                // Debug.Log("Matched!");
+                audioSource.PlayOneShot(matchedTileAudio);
                 RemoveMatchedTilesFromList(firstTileIndex);
-                StartCoroutine(RearrangeTiles());
+                PlayMatchedEffect(firstTileIndex);
+                StartRearrangeCoroutine();
+
+                OnMatchTiles.Invoke();
             }
             else if (tiles.Count >= tilesMaxLength)
             {
-                Debug.LogError("Lost!");
+                OnLost?.Invoke();
+                isLost = true;
             }
 
         }));
@@ -105,10 +131,20 @@ public class GameplayManager : MonoBehaviour
         action?.Invoke();
     }
 
+    public void PlayMatchedEffect(int firstTileIndex)
+    {
+        for (int i = firstTileIndex; i < firstTileIndex + 3; i++)
+        {
+            Vector3 targetPosition = targetPoint.transform.position + new Vector3(0, 0, -tileWidth * i);
+            Instantiate(clearTileEffect, targetPosition, Quaternion.identity);
+        }
+    }
+
     public void RemoveMatchedTilesFromList(int firstTileIndex)
     {
         for (int i = 0; i < 3; i++)
         {
+
             tiles[firstTileIndex].clearTile();
             tiles.Remove(tiles[firstTileIndex]);
         }
@@ -148,7 +184,7 @@ public class GameplayManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!isLost && Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
@@ -159,6 +195,7 @@ public class GameplayManager : MonoBehaviour
                     // if not in the list yet
                     if (!tiles.Contains(selectedTile))
                     {
+                        audioSource.PlayOneShot(pickUpTileAudio);
                         selectedTile.DisplayOutline();
                         selectedTile.clearPhysics();
                         AddTileToList(selectedTile);

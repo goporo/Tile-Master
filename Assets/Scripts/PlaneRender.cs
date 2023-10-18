@@ -8,7 +8,6 @@ public class PlaneRender : MonoBehaviour
     public Color endColor = new Color(0.16f, 0.31f, 0.6f, 1f);   // #284f9a in RGBA
     public float lerpFactor = 0.58f; // Interpolation factor between 0 and 1
 
-    // Start is called before the first frame update
     void Start()
     {
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
@@ -17,7 +16,6 @@ public class PlaneRender : MonoBehaviour
             Material material = meshRenderer.material;
             if (material != null)
             {
-                // Set the material color gradient based on the lerpFactor
                 material.color = Color.red;
             }
         }
