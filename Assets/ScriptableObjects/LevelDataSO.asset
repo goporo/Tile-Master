@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0159b2f285cfa6b41a3a10f777652bd7, type: 3}
+  m_Name: LevelDataSO
+  m_EditorClassIdentifier: 
+  levelContent:
+  - levelName: Level 1
+    levelNumber: 1
+    playTime: 400
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 2
+    levelNumber: 2
+    playTime: 400
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 3
+    levelNumber: 3
+    playTime: 400
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7866703182083655}
   - component: {fileID: 7697383935488800438}
   m_Layer: 0
-  m_Name: Tile_05
+  m_Name: TilePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe151a77dcb37f458c825b00d4b703c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileName: Tile_05
-  tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+  tileName: Tile_00
+  tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
   topLocation: {fileID: 7769233327060183884}
 --- !u!114 &7866703182083655
 MonoBehaviour:

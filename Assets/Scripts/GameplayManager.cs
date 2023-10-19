@@ -184,6 +184,7 @@ public class GameplayManager : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) return;
         if (!isLost && Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

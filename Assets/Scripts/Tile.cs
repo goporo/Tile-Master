@@ -7,11 +7,10 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private string tileName;
-    [SerializeField] private Sprite tileSprite;
+    private string _tileType;
+    private Sprite _tileSprite;
 
-
-    // [SerializeField] private int tileChance;
+    private int _tileChance;
     [SerializeField] private GameObject topLocation;
 
 
@@ -25,7 +24,20 @@ public class Tile : MonoBehaviour
         _outline = GetComponent<Outline>();
         _rigidbody = GetComponent<Rigidbody>();
         _boxcollider = GetComponent<BoxCollider>();
-        topLocation.GetComponent<SpriteRenderer>().sprite = tileSprite;
+        topLocation.GetComponent<SpriteRenderer>().sprite = _tileSprite;
+    }
+
+    /// <summary>
+    /// This function get called right after Instantiate the prefab but before Start executes
+    /// </summary>
+    /// <param name="tileType"></param>
+    /// <param name="tileSprite"></param>
+    /// <param name="tileChance"></param>
+    public void SetTileParameter(string tileType, Sprite tileSprite, int tileChance)
+    {
+        _tileType = tileType;
+        _tileSprite = tileSprite;
+        _tileChance = tileChance;
     }
 
     /// <summary>
@@ -35,11 +47,11 @@ public class Tile : MonoBehaviour
     /// <returns></returns>
     public int Compare(Tile y)
     {
-        return this.tileName.CompareTo(y.tileName);
+        return this._tileType.CompareTo(y._tileType);
     }
     public int Compare(Tile x, Tile y)
     {
-        return x.tileName.CompareTo(y.tileName);
+        return x._tileType.CompareTo(y._tileType);
     }
     public void clearTile()
     {
