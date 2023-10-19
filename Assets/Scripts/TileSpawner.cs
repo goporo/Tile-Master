@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TileSpawner : MonoBehaviour
 {
@@ -21,13 +22,18 @@ public class TileSpawner : MonoBehaviour
     /// </summary>
     private const float Y_LOWER_LIMIT = 0.06f;
     private const float Y_UPPER_LIMIT = 0.45f;
-    public UnityEvent OnWon;
 
     private string _levelName;
     private int _levelIndex;
-    private int _playTime;
+    private float _playTime;
     private int _tilesVariantCount;
     private List<LevelTile> _levelTiles = new();
+
+    private float playTime;
+    [SerializeField] Slider timer;
+    public UnityEvent OnWon;
+
+    public UnityEvent OnTimerEnd;
 
     void Start()
     {
@@ -49,25 +55,47 @@ public class TileSpawner : MonoBehaviour
         {
             _tilesCount += levelTile.tileChance * 3;
         }
-        for (int i = 0; i < _tilesCount; i++)
+        for (int currentTileIndex = 0; currentTileIndex < _tilesVariantCount; currentTileIndex++)
         {
-            Vector3 randomPosition = new Vector3(
-            Random.Range(-X_LIMIT, X_LIMIT),
-            Random.Range(Y_LOWER_LIMIT, Y_UPPER_LIMIT),
-            Random.Range(-Z_LIMIT, Z_LIMIT)
-            );
-            Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+            int numberOfEachTile = _levelTiles[currentTileIndex].tileChance * 3;
+            for (int i = 0; i < numberOfEachTile; i++)
+            {
+                Vector3 randomPosition = new Vector3(
+                Random.Range(-X_LIMIT, X_LIMIT),
+                Random.Range(Y_LOWER_LIMIT, Y_UPPER_LIMIT),
+                Random.Range(-Z_LIMIT, Z_LIMIT)
+                );
+                Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 
-            int currentTileIndex = i % _tilesVariantCount;
-            GameObject instantiatedPrefab = Instantiate(tilePrefab, randomPosition, randomRotation);
-            Tile tile = instantiatedPrefab.GetComponent<Tile>();
+                GameObject instantiatedPrefab = Instantiate(tilePrefab, randomPosition, randomRotation);
+                Tile tile = instantiatedPrefab.GetComponent<Tile>();
 
-            tile.SetTileParameter(
-            _levelTiles[currentTileIndex].tileType.ToString(),
-            _levelTiles[currentTileIndex].tileSprite,
-            _levelTiles[currentTileIndex].tileChance
-            );
+                tile.SetTileParameter(
+                _levelTiles[currentTileIndex].tileType.ToString(),
+                _levelTiles[currentTileIndex].tileSprite,
+                _levelTiles[currentTileIndex].tileChance
+                );
+            }
         }
+        playTime = _playTime;
+        StartCoroutine(StartCountdown());
+    }
+
+    IEnumerator StartCountdown()
+    {
+        while (playTime > 0)
+        {
+            timer.value = playTime / _playTime;
+            yield return null;
+            playTime -= Time.deltaTime;
+        }
+
+        OnTimerEnd?.Invoke();
+    }
+
+    public float getCurrentLevelPlayTime()
+    {
+        return _playTime;
     }
 
     public void HandleOnMatchTiles()

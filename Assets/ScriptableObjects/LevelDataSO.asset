@@ -15,7 +15,7 @@ MonoBehaviour:
   levelContent:
   - levelName: Level 1
     levelNumber: 1
-    playTime: 400
+    playTime: 30
     levelTiles:
     - tileType: 0
       tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
@@ -28,7 +28,7 @@ MonoBehaviour:
       tileChance: 1
   - levelName: Level 2
     levelNumber: 2
-    playTime: 400
+    playTime: 60
     levelTiles:
     - tileType: 0
       tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
@@ -44,7 +44,42 @@ MonoBehaviour:
       tileChance: 2
   - levelName: Level 3
     levelNumber: 3
-    playTime: 400
+    playTime: 180
+    levelTiles:
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 4
+    levelNumber: 4
+    playTime: 180
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 5
+    levelNumber: 5
+    playTime: 180
     levelTiles:
     - tileType: 0
       tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
@@ -63,4 +98,499 @@ MonoBehaviour:
       tileChance: 2
     - tileType: 5
       tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 6
+    levelNumber: 6
+    playTime: 180
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 7
+    levelNumber: 7
+    playTime: 180
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 8
+    levelNumber: 3
+    playTime: 180
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 9
+    levelNumber: 9
+    playTime: 180
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 10
+    levelNumber: 10
+    playTime: 300
+    levelTiles:
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 12
+      tileSprite: {fileID: -323319110, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+  - levelName: Level 11
+    levelNumber: 11
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 15
+      tileSprite: {fileID: -1492455410, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 12
+    levelNumber: 12
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 16
+      tileSprite: {fileID: -825364738, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 19
+      tileSprite: {fileID: -455559489, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 13
+    levelNumber: 13
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 10
+      tileSprite: {fileID: -941731536, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 14
+    levelNumber: 14
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 15
+    levelNumber: 15
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 16
+      tileSprite: {fileID: -825364738, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 23
+      tileSprite: {fileID: -440629077, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 26
+      tileSprite: {fileID: -1410152013, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 10
+      tileSprite: {fileID: -941731536, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 16
+    levelNumber: 16
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 20
+      tileSprite: {fileID: -717256803, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 15
+      tileSprite: {fileID: -1492455410, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 3
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 10
+      tileSprite: {fileID: -941731536, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+  - levelName: Level 17
+    levelNumber: 17
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 15
+      tileSprite: {fileID: -1492455410, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 22
+      tileSprite: {fileID: 290981397, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 23
+      tileSprite: {fileID: -440629077, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 24
+      tileSprite: {fileID: -261131682, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 25
+      tileSprite: {fileID: -1530910701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 26
+      tileSprite: {fileID: -1410152013, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 18
+    levelNumber: 18
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 22
+      tileSprite: {fileID: 290981397, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 23
+      tileSprite: {fileID: -440629077, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 15
+      tileSprite: {fileID: -1492455410, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 17
+      tileSprite: {fileID: -824748760, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 19
+    levelNumber: 19
+    playTime: 300
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 10
+      tileSprite: {fileID: -941731536, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 15
+      tileSprite: {fileID: -1492455410, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 16
+      tileSprite: {fileID: -825364738, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+  - levelName: Level 20
+    levelNumber: 20
+    playTime: 400
+    levelTiles:
+    - tileType: 0
+      tileSprite: {fileID: -259253140, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 1
+      tileSprite: {fileID: 1103101088, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 2
+      tileSprite: {fileID: 9752701, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 3
+      tileSprite: {fileID: -1099001099, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 4
+      tileSprite: {fileID: 233676633, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 5
+      tileSprite: {fileID: 911063261, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 6
+      tileSprite: {fileID: -230619414, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 7
+      tileSprite: {fileID: 690826323, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 8
+      tileSprite: {fileID: -1502703087, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 9
+      tileSprite: {fileID: -345631479, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 10
+      tileSprite: {fileID: -941731536, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 11
+      tileSprite: {fileID: 1282936413, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 12
+      tileSprite: {fileID: 610726341, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 2
+    - tileType: 13
+      tileSprite: {fileID: -61354854, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
+      tileChance: 1
+    - tileType: 14
+      tileSprite: {fileID: 1295546237, guid: 35c5917ce9ea3f44ebd4d1bf10884dd9, type: 3}
       tileChance: 2

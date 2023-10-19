@@ -182,6 +182,11 @@ public class GameplayManager : MonoBehaviour
         return tilesMaxLength;
     }
 
+    public void SetGameLost(bool isLost)
+    {
+        this.isLost = isLost;
+    }
+
     private void Update()
     {
         if (Time.timeScale == 0) return;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class HandleGameState : MonoBehaviour
 {
     [SerializeField] TMP_Text levelStage;
+    [SerializeField] TMP_Text endGameInfo;
+
     private void Start()
     {
         Application.targetFrameRate = 60;
@@ -16,9 +19,10 @@ public class HandleGameState : MonoBehaviour
             levelStage.text = levelNumber.ToString();
         }
     }
-    public void EnableMenu()
+    public void EnableMenu(string menuInfo)
     {
         gameObject.SetActive(true);
+        this.endGameInfo.text = menuInfo;
         Time.timeScale = 0;
     }
     public void DisableMenu()
@@ -29,10 +33,8 @@ public class HandleGameState : MonoBehaviour
     public void EnableWonMenu()
     {
         gameObject.SetActive(true);
-
-        // limit max level to 3
+        endGameInfo.text = "Completed";
         int nextLevel = PlayerPrefs.GetInt("CurrentLevelIndex", 0) + 1;
-        if (nextLevel > 2) nextLevel = 0;
         PlayerPrefs.SetInt("CurrentLevelIndex", nextLevel);
     }
     public void LoadMenuScene()
